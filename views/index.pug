@@ -1,5 +1,38 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    .rows
+      .row
+        .title
+          h2 Personal Data
+      .row
+        .col
+          form(method='POST' action='/users')
+            div.form-group
+              .form-label
+                label(for='dateofbirth') Date of Birth:
+              .form
+                input#dateofbirth.form-input(type='text', placeholder='dd-MM-yyyy' name='dateofbirth')
+            div.form-group
+              .form-label
+                label(for='surname') Surname:
+              .form
+                input#surname.form-input(type='text', placeholder='Surname' name='surname')
+            div.form-group
+              .form-label
+                label(for='initials') Initials:
+              .form
+                input#initials.form-input(type='text', placeholder='A B' name='initials')
+            div.form-group
+              .form-label
+                label(for='nationality') Nationality:
+              .form
+                input#nationality.form-input(type='text', placeholder='Nationality' name='nationality')
+            div.form-group
+              .form-label
+                label(for='bsn') BSN:
+              .form
+                input#bsn.form-input(type='text', placeholder='Dutch social security number' name='bsn')
+            div.form-button
+              button.btn.btn-primary(type='submit') Verify Information
