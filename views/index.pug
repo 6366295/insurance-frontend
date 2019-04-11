@@ -5,10 +5,67 @@ block content
     .rows
       .row
         .title
-          h2 Personal Data
-      .row
-        .col
-          form(method='POST' action='/users')
+          h1 Insurance Application Form
+  ul.progress
+  form(method='POST' action='/users')
+    .container
+      .rows
+        .row
+          .title
+            h2 Insurance
+        .row
+          .col
+            div.form-group
+              .form-label
+                label(for='insurance') Product:
+              .form
+                select#insurance.form-select(type='text', name='insurance')
+                  option(value='0') -- Select Product --
+                  option(value='1') Health Insurance
+    .container.variant
+      .rows
+        .row
+          .title
+            h2 Contact Information
+        .row
+          .col
+            div.form-group
+              .form-label
+                label(for='zipcode') Zip Code:
+              .form
+                input#zipcode.form-input(type='text', placeholder='Zip Code' name='zipcode')
+            div.form-group
+              .form-label
+                label(for='housenumber') House Number:
+              .form
+                input#housenumber.form-input(type='text', placeholder='House Number' name='housenumber')
+            div.form-group
+              .form-label
+                label(for='streetname') Street Name:
+              .form
+                input#streetname.form-input(type='text', placeholder='Street Name' name='streetname')
+            div.form-group
+              .form-label
+                label(for='city') City:
+              .form
+                input#city.form-input(type='text', placeholder='City' name='city')
+            div.form-group
+              .form-label
+                label(for='telephonenumber') Telephone Number:
+              .form
+                input#telephonenumber.form-input(type='text', placeholder='Telephone Number' name='telephonenumber')
+            div.form-group
+              .form-label
+                label(for='email') Email:
+              .form
+                input#email.form-input(type='text', placeholder='Email' name='email')
+    .container
+      .rows
+        .row
+          .title
+            h2 Personal Data
+        .row
+          .col
             div.form-group
               .form-label
                 label(for='dateofbirth') Date of Birth:
@@ -34,5 +91,21 @@ block content
                 label(for='bsn') BSN:
               .form
                 input#bsn.form-input(type='text', placeholder='Dutch social security number' name='bsn')
+    .container.variant
+      .rows
+        .row
+          .title
+            h2 Payment Detail
+        .row
+          .col
+            div.form-group
+              .form-label
+                label(for='iban') IBAN:
+              .form
+                input#iban.form-input(type='text', placeholder='IBAN Number' name='iban')
+    .container
+      .rows
+        .row
+          .col
             div.form-button
               button.btn.btn-primary(type='submit') Verify Information

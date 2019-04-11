@@ -1,42 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-var http = require('http');
+var database = require("../database.js");
 
-/* GET users listing. */
+/* POST insurance application. */
 router.post('/', function(req, res, next) {
-  // form
-  var post = req.body;
+  var body = req.body;
 
-  var options = {
-    host: "localhost",
-    port: "8080",
-    path: "/customers",
-    method: "GET",
-    headers: {
-        "Content-Type": "application/json"
-    }
-  };
+  database.postMethod(body);
 
-  var req2 = http.request(options, function (res) {
-    var responseString = "";
-
-    res.on("data", function (data) {
-        responseString += data;
-        // save all the data from response
-    });
-    res.on("end", function () {
-        console.log(responseString);
-        // print to console when response ends
-    });
-  });
-
-  req2.write("TEST");
-
-  req2.end()
-
-  res.send(post);
-  // console.error(name);
+  // res.send(body);
+  // res.render('index', { title: 'Insurance Application Sent' });
 });
 
 module.exports = router;
