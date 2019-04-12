@@ -7,7 +7,7 @@ block content
         .title
           h1 Insurance Application Form
   ul.progress
-  form(method='POST' action='/users')
+  form(method='POST' action='/applications')
     .container
       .rows
         .row
@@ -33,17 +33,17 @@ block content
               .form-label
                 label(for='zipcode') Zip Code:
               .form
-                input#zipcode.form-input(type='text', placeholder='Zip Code' name='zipcode')
+                input#zipcode.form-input(type='text', placeholder='Zip Code' name='zipCode')
             div.form-group
               .form-label
                 label(for='housenumber') House Number:
               .form
-                input#housenumber.form-input(type='text', placeholder='House Number' name='housenumber')
+                input#housenumber.form-input(type='text', placeholder='House Number' name='houseNumber')
             div.form-group
               .form-label
                 label(for='streetname') Street Name:
               .form
-                input#streetname.form-input(type='text', placeholder='Street Name' name='streetname')
+                input#streetname.form-input(type='text', placeholder='Street Name' name='streetName')
             div.form-group
               .form-label
                 label(for='city') City:
@@ -53,7 +53,7 @@ block content
               .form-label
                 label(for='telephonenumber') Telephone Number:
               .form
-                input#telephonenumber.form-input(type='text', placeholder='Telephone Number' name='telephonenumber')
+                input#telephonenumber.form-input(type='text', placeholder='Telephone Number' name='telephoneNumber')
             div.form-group
               .form-label
                 label(for='email') Email:
@@ -70,7 +70,7 @@ block content
               .form-label
                 label(for='dateofbirth') Date of Birth:
               .form
-                input#dateofbirth.form-input(type='text', placeholder='dd-MM-yyyy' name='dateofbirth')
+                input#dateofbirth.form-input(type='text', placeholder='dd-MM-yyyy' name='dateOfBirth')
             div.form-group
               .form-label
                 label(for='surname') Surname:

@@ -10,7 +10,7 @@ router.post('/', function(req, res, next) {
   database.postMethod(body);
 
   // res.send(body);
-  // res.render('index', { title: 'Insurance Application Sent' });
+  res.render('index', { title: 'Insurance Application Sent' });
 });
 
 module.exports = router;
