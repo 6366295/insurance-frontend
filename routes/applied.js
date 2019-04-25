@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var database = require("../database.js");
+var database = require("../backendService.js");
 
 /* POST insurance application. */
 router.post('/', function(req, res, next) {

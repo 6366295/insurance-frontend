@@ -1,4 +1,15 @@
-# insurance-frontend
-Practicing node.js by making a frontend to the insurance-rest-api
+# Insurance Request Frontend
 
-Also using the Express package
+## Usage
+
+Install:
+
+```
+npm install
+```
+
+Run:
+
+```
+npm start
+```

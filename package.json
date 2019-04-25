@@ -1,9 +1,9 @@
 {
   "name": "insurance-frontend",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "sass scss:public/stylesheets && node ./bin/www",
     "scss": "sass --watch scss:public/stylesheets"
   },
   "dependencies": {
@@ -13,6 +13,7 @@
     "http-errors": "~1.6.2",
     "json-stringify-safe": "^5.0.1",
     "morgan": "~1.9.0",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "sass": "^1.19.0"
   }
 }
