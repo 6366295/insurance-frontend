@@ -88,7 +88,7 @@ typings/
 .dynamodb/
 
 # CSS Files
-.css
-.css.map
+*.css
+*.css.map
 
 # End of https://www.gitignore.io/api/node
