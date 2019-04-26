@@ -1,10 +1,23 @@
 var stringify = require('json-stringify-safe');
-var http = require('http');
+var https = require('https');
+var fs = require('fs');
 
-// Insurance API back-end
+
+var agentOptions = {
+  host: 'localhost',
+  port: '8443',
+  path: '/',
+  rejectUnauthorized: false
+};
+
+var agent = new https.Agent(agentOptions);
+
 var options = {
   host: "localhost",
-  port: "8080",
+  port: "8443",
+  ca: fs.readFileSync('cert/keystore.p12'),
+  requestCert: true,
+  agent: agent,
   headers: {
       "Content-Type": "application/json"
   }
@@ -17,7 +30,7 @@ function postMethod(body) {
   console.log(options);
   console.log(body)
 
-  var request = http.request(options, function (response) {
+  var request = https.request(options, function (response) {
     var responseString = "";
 
     response.on("data", function (data) {

@@ -19,7 +19,15 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+const https = require('https');
+const fs = require('fs');
+
+const options = {
+  pfx: fs.readFileSync('cert/keystore.p12'),
+  passphrase: 'springapi'
+};
+
+var server = https.createServer(options, app);
 
 /**
  * Listen on provided port, on all network interfaces.
