@@ -1,6 +1,18 @@
 extends layout
 
 block content
+  script(type='text/javascript').
+    window.onload = function() {
+      var body = '!{response}';
+      if (body) {
+        var resp = JSON.parse(body);
+        for (var key in resp) {
+          document.getElementById(key).innerHTML = resp[key];
+          document.getElementById(key).classList.add('invalid');
+          document.getElementsByName(key)[0].classList.add('invalid');
+        }
+      }
+    }
   .container
     .rows
       .row

@@ -21,6 +21,12 @@ ul {
   top: 0;
 }
 
+fieldset {
+  margin: 0px;
+  border-width: 0px;
+  padding: 0px;
+}
+
 .container {
   font: 100% $font-stack;
   // border-radius: 25px;
