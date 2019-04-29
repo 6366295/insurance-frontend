@@ -2,7 +2,7 @@ var stringify = require('json-stringify-safe');
 var https = require('https');
 var fs = require('fs');
 
-
+// Test agent for testing https connection with rest api
 var agentOptions = {
   host: 'localhost',
   port: '8443',
@@ -23,14 +23,14 @@ var options = {
   }
 };
 
-function postMethod(body) {
+function postMethod(body, callback) {
   options["method"] = "POST";
   options["path"] = "/customers";
 
-  console.log(options);
-  console.log(body)
+  // console.log(options);
+  // console.log(body)
 
-  var request = https.request(options, function (response) {
+  var request = https.request(options, function(response) {
     var responseString = "";
 
     response.on("data", function (data) {
@@ -39,7 +39,8 @@ function postMethod(body) {
     });
     response.on("end", function () {
         // print to console when response ends
-        console.log(responseString);
+        // console.log(responseString);
+        return callback(responseString);
     });
   });
 

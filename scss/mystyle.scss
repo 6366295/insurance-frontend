@@ -106,3 +106,9 @@ ul {
   background-color: $secondary-variant;
   color: $secondary-text-color;
 }
+
+.invalid {
+  padding: 15px 15px 15px 15px;
+  color: red;
+  border-color: red;
+}

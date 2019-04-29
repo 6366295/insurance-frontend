@@ -3,5 +3,14 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/mystyle.css')
+    script(type='text/javascript').
+      window.onload = function() {
+        var resp = JSON.parse('!{response}');
+        for (var key in resp) {
+          document.getElementById(key).innerHTML = resp[key];
+          document.getElementById(key).classList.add('invalid');
+          document.getElementsByName(key)[0].classList.add('invalid');
+        }
+      }
   body
     block content
