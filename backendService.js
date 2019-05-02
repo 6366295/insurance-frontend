@@ -13,7 +13,7 @@ var agentOptions = {
 var agent = new https.Agent(agentOptions);
 
 var options = {
-  host: "db",
+  host: "localhost",
   port: "8443",
   ca: fs.readFileSync('cert/keystore.p12'),
   requestCert: true,
