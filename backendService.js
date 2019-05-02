@@ -4,7 +4,7 @@ var fs = require('fs');
 
 // Test agent for testing https connection with rest api
 var agentOptions = {
-  host: 'localhost',
+  host: 'web',
   port: '8443',
   path: '/',
   rejectUnauthorized: false
@@ -13,7 +13,7 @@ var agentOptions = {
 var agent = new https.Agent(agentOptions);
 
 var options = {
-  host: "localhost",
+  host: "web",
   port: "8443",
   ca: fs.readFileSync('cert/keystore.p12'),
   requestCert: true,
