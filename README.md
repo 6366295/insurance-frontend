@@ -1,5 +1,7 @@
 # Insurance Request Frontend
 
+Angular Version
+
 ## Usage
 
 Install:
@@ -11,5 +13,5 @@ npm install
 Run:
 
 ```
-npm start
+ng build && ng serve
 ```
