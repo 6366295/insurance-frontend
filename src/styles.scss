@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #ffe68b;
+$primary-variant: #ffd339;
+$secondary-color: #8ba4ff;
+$secondary-variant: #004add;
+$primary-text-color: #000000;
+$secondary-text-color: #ffffff;
+
+body {
+    margin: 0px;
+    background-color: $primary-color;
+}

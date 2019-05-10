@@ -1,0 +1,42 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #ffe68b;
+$primary-variant: #ffd339;
+$secondary-color: #8ba4ff;
+$secondary-variant: #004add;
+$primary-text-color: #000000;
+$secondary-text-color: #ffffff;
+
+h1 {
+    margin: 0;
+    padding: 20px;
+    color: $secondary-color;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    overflow: hidden; 
+    margin: 0px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    list-style-type: none;
+}
+
+nav a {
+    color: #727272;
+    text-decoration: none;
+    padding: 12px 10px 10px 10px;
+    margin: 0px 20px 0px 20px;
+    display: inline-block;
+    border-bottom: 2px solid $primary-color;
+}
+
+nav a:hover {
+    color: $secondary-color;
+    border-bottom: 2px solid $secondary-color;
+}
+
+nav a.active {
+    color: $secondary-color;
+    border-bottom: 2px solid $secondary-color;
+}
