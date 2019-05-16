@@ -1,3 +1,37 @@
-<p>
-  personal-info works!
-</p>
+<div class="container">
+  <div>
+    <p>{{invalidCustomer.initials}}</p>
+  </div>
+  <div>
+    <label>Initials:</label>
+    <input [(ngModel)]="initials" placeholder="A A" />
+  </div>
+  <div>
+    <p>{{invalidCustomer.surname}}</p>
+  </div>
+  <div>
+    <label>Surname: </label>
+    <input [(ngModel)]="surname" placeholder="surname" />
+  </div>
+  <div>
+    <p>{{invalidCustomer.dateOfBirth}}</p>
+  </div>
+  <div>
+    <label>Date of Birth: </label>
+    <input [(ngModel)]="dateOfBirth" placeholder="dd-MM-yyyy" />
+  </div>
+  <div>
+    <p>{{invalidCustomer.nationality}}</p>
+  </div>
+  <div>
+    <label>Nationality: </label>
+    <input [(ngModel)]="nationality" placeholder="nationality" />
+  </div>
+  <div>
+    <p>{{invalidCustomer.bsn}}</p>
+  </div>
+  <div>
+    <label>BSN: </label>
+    <input [(ngModel)]="bsn" placeholder="bsn" />
+  </div>
+</div>

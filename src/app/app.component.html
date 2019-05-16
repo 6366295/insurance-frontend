@@ -1,6 +1,10 @@
 <h1>{{title}}</h1>
 <nav>
-  <a routerLink="/personal">Personal Information</a>
-  <a routerLink="/contact">Contact Information</a>
-  <a routerLink="/payment">Payment Information</a>
+  <a routerLink="/personal" routerLinkActive="active">Personal Information</a>
+  <a routerLink="/contact" routerLinkActive="active">Contact Information</a>
+  <a routerLink="/payment" routerLinkActive="active">Payment Information</a>
 </nav>
+<router-outlet></router-outlet>
+<div *ngIf='showButton'>
+  <button (click)='submit()'>Submit</button>
+</div>
