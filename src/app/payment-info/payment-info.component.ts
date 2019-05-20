@@ -1,5 +1,4 @@
 import { Component, OnInit} from '@angular/core';
-import { Location } from '@angular/common';
 
 import { FormService } from '../form.service';
 
@@ -10,7 +9,7 @@ import { FormService } from '../form.service';
 })
 export class PaymentInfoComponent implements OnInit {
 
-  constructor(private formService: FormService, private location: Location) {}
+  constructor(private formService: FormService) {}
 
   invalidCustomer = this.formService.invalidCustomer;
 

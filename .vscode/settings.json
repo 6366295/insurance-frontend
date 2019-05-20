@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1607259f-5b91-47c0-a2e9-616804406f62/resourceGroups/AngularWebApp/providers/Microsoft.Web/sites/HarvestAngularWebApp",
+    "appService.deploySubpath": "dist/insurance-frontend"
+}

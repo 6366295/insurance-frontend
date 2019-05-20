@@ -46,7 +46,7 @@ export class FormService {
     iban: ''
   };
 
-  private apiUrl = 'https://harvesttestfunction.azurewebsites.net/customers';
+  private apiUrl = 'http://localhost:7071/customers';
 
   constructor(private http: HttpClient) { }
 
